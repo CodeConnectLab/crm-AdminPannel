@@ -39,7 +39,7 @@ export default function Allhosting() {
       <th scope="col">Client Name</th>
       <th scope="col">Client Email</th>
       <th scope="col">Client Mobile</th>
-      <th scope="col">Client Address</th>
+      <th scope="col">Client Address</th>  
       <th scope="col">Ip</th>
       <th scope="col">Domain</th>
     </tr>
