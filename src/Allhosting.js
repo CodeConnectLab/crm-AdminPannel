@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import './css.css'
 export default function Allhosting() {
-  const [country, setCountry] = useState(['aaa']);
+  const [country, setCountry] = useState([]);
 
       
   useEffect( ()=>{
@@ -47,11 +47,12 @@ export default function Allhosting() {
   <tbody>
     
     <tr>
+
     <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Otto</td>
+      <td>Mark1</td>
+      <td>Otto1</td>
+      <td>@mdo1</td>
+      <td>Otto1</td>
       <td>@mdo</td>
       
       <td>@mdo</td>
