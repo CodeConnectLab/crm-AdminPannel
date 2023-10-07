@@ -25,7 +25,7 @@ export default function Allhosting() {
       }
       getCountry();
   },[]);
-  console.log(country)
+ 
   return (
     <div  className="container" >
         <div className='row'> 
@@ -45,18 +45,18 @@ export default function Allhosting() {
     </tr>
   </thead>
   <tbody>
-    
-    <tr>
-
-    <th scope="row">1</th>
-      <td>Mark1</td>
-      <td>Otto1</td>
-      <td>@mdo1</td>
-      <td>Otto1</td>
-      <td>@mdo</td>
-      
-      <td>@mdo</td>
-    </tr>
+     {             country.map((country1) => (
+                  <tr>
+      <th scope="row">1</th>
+      <td>{country.name}</td>
+      <td>{country.email}</td> 
+      <td>{country.mobile}</td>
+      <td>{country.address}</td>
+      <td>{country.ip}</td>  
+      <td>{country.domain}</td>
+               </tr>  
+                ))
+              }
   </tbody>
 </table>
   </form>
