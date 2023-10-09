@@ -43,7 +43,7 @@ export default function FormPage() {
       <input
         type="email"
         className="form-control"
-        id="exampleInputPassword1"
+       
         placeholder='Client Email'
         onChange={e => setData({...data, email: e.target.value})}
       />
@@ -69,7 +69,7 @@ export default function FormPage() {
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Client Address'
-        onChange={e => setData({...data, mobile: e.target.value})}
+        onChange={e => setData({...data, address: e.target.value})}
       />
     </div>
     <br/>
@@ -81,7 +81,7 @@ export default function FormPage() {
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Server IP'
-        onChange={e => setData({...data, mobile: e.target.value})}
+        onChange={e => setData({...data, ip: e.target.value})}
       />
     </div>
     <br/>
