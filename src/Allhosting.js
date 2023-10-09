@@ -4,7 +4,7 @@ export default function Allhosting() {
   const [country, setCountry] = useState([]);
 
       
-  useEffect( ()=>{
+  useEffect( ()=>{  
       const getCountry = async ()=>{
         try{
           const res = await fetch("https://task-mernss.onrender.com/api/v1/hosting",{
@@ -15,11 +15,11 @@ export default function Allhosting() {
               'Content-Type': 'application/json'
             }
           });
-          const getcon = await res.json();  
-          console.log(getcon);      
-          setCountry(getcon);
-          }catch(error){ 
-            console.log('An error occured')
+          const getcon = await res.json();    
+          
+          setCountry(getcon); 
+          }catch(error){  
+           
             console.log(error)
         }
       }
@@ -44,19 +44,20 @@ export default function Allhosting() {
       <th scope="col">Domain</th>
     </tr>
   </thead>
-  <tbody>
-     {             country.map((country1) => (
-                  <tr>
+  <tbody  >
+     {             country.map(country1 => 
+   
+                  <tr> 
       <th scope="row">1</th>
-      <td>{country.name}</td>
-      <td>{country.email}</td> 
-      <td>{country.mobile}</td>
-      <td>{country.address}</td>
-      <td>{country.ip}</td>  
-      <td>{country.domain}</td>
-               </tr>  
-                ))
-              }
+      <td>{country1.name}</td>  
+      <td>{country1.email}</td> 
+      <td>{country1.mobile}</td>
+      <td>{country1.address}</td> 
+      <td>{country1.ip}</td>    
+      <td>{country1.domain}</td>
+               </tr>   
+                  )
+               } 
   </tbody>
 </table>
   </form>

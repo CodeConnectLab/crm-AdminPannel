@@ -1,11 +1,30 @@
-import React from 'react'
+import React , { useState } from 'react'
 import './css.css'
 export default function FormPage() {
-  return (
+
+  const [data, setData] = useState({});
+
+  const handleSubmit = async (e) => {
+
+        console.log(data)
+    e.preventDefault();
+    const response = await fetch('https://task-mernss.onrender.com/api/v1/add_hosting', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const result = await response.json();
+    console.log(result);
+  }
+
+ 
+  return (  
     <div  className="container" >
         <div className='row'> 
         <div className='col-lg-6 m-auto abcd'>
-        <form className='py-5 mt-20'>
+        <form onSubmit={handleSubmit} className='py-5 mt-20'>
     <div className="mb-3">
       
       <input
@@ -14,6 +33,7 @@ export default function FormPage() {
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         placeholder='Client Name'
+        onChange={e => setData({...data, name: e.target.value})}
       />
      
     </div>
@@ -25,6 +45,7 @@ export default function FormPage() {
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Client Email'
+        onChange={e => setData({...data, email: e.target.value})}
       />
     </div>
     <br/>
