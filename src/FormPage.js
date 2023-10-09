@@ -41,7 +41,7 @@ export default function FormPage() {
     <div className="mb-3">
       
       <input
-        type="password"
+        type="email"
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Client Email'
@@ -53,10 +53,11 @@ export default function FormPage() {
     <div className="mb-3">
       
       <input
-        type="password"
+        type="number"
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Client Mobile'
+        onChange={e => setData({...data, mobile: e.target.value})}
       />
     </div>
     <br/>
@@ -64,10 +65,11 @@ export default function FormPage() {
     <div className="mb-3">
       
       <input
-        type="password"
+        type="text"
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Client Address'
+        onChange={e => setData({...data, mobile: e.target.value})}
       />
     </div>
     <br/>
@@ -75,10 +77,11 @@ export default function FormPage() {
     <div className="mb-3">
       
       <input
-        type="password"
+        type="text"
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Server IP'
+        onChange={e => setData({...data, mobile: e.target.value})}
       />
     </div>
     <br/>
@@ -86,10 +89,11 @@ export default function FormPage() {
     <div className="mb-3">
       
       <input
-        type="password"
+        type="text"
         className="form-control"
         id="exampleInputPassword1"
         placeholder='Domain Name'
+        onChange={e => setData({...data, domain: e.target.value})}
       />
     </div>
     <br/>
