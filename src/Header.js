@@ -13,8 +13,8 @@ export default function Header() {
             New Hosting
           </NavLink>
         </li>  
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/all_hosting">
+        <li className="nav-item">  
+          <NavLink className="nav-link" to="/all_hosting"> 
           All Hosting
           </NavLink>
         </li>
