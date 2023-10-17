@@ -44,7 +44,7 @@ export default function Allhosting() {
       <th scope="col">Domain</th>
     </tr>   
   </thead>
-  <tbody  >
+  <tbody  >   
      {             country.map(country1 => 
    
                   <tr> 
