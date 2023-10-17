@@ -42,19 +42,19 @@ export default function Allhosting() {
       <th scope="col">Client Address</th>  
       <th scope="col">Ip</th>
       <th scope="col">Domain</th>
-    </tr>
+    </tr>   
   </thead>
   <tbody  >
      {             country.map(country1 => 
    
                   <tr> 
-      <th scope="row"> </th>
+      <th scope="row"> 11</th>       
       <td>{country1.name}</td>  
-      <td>{country1.email}</td> 
+      <td>{country1.email}</td>      
       <td>{country1.mobile}</td>
       <td>{country1.address}</td> 
       <td>{country1.ip}</td>    
-      <td>{country1.domain}</td>
+      <td>{country1.domain}</td>  
                </tr>   
                   )
                } 
