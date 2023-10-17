@@ -57,7 +57,7 @@ export default function Allhosting() {
       <td>{country1.domain}</td>  
                </tr>   
                   )
-               } 
+               }      
   </tbody>
 </table>
   </form>
