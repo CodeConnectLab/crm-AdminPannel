@@ -48,7 +48,7 @@ export default function Allhosting() {
      {             country.map(country1 => 
    
                   <tr> 
-      <th scope="row"> 11</th>       
+      <th scope="row"> 11t</th>       
       <td>{country1.name}</td>  
       <td>{country1.email}</td>      
       <td>{country1.mobile}</td>
