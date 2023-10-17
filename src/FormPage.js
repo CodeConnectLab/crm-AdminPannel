@@ -75,17 +75,6 @@ export default function FormPage() {
     </div>
     <br/>
 
-    <div className="mb-3">
-      
-      <input
-        type="text"
-        className="form-control"
-        id="exampleInputPassword1"
-        placeholder='Server IP'
-        onChange={e => setData({...data, ip: e.target.value})}
-      />
-    </div>
-    <br/>
 
     <div className="mb-3">
       

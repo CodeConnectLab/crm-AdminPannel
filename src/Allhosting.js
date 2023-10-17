@@ -2,6 +2,20 @@ import React, {useEffect,useState} from 'react'
 import './css.css'
 export default function Allhosting() {
   const [country, setCountry] = useState([]);
+    
+
+  const handleDelete = async(e) => {
+    
+        
+    fetch(`https://task-mernss.onrender.com/api/v1/delete/${e}`, {
+      method: 'DELETE'
+    }) 
+    .then(res =>  res.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+    alert("delete Successfully")
+      
+  }
 
       
   useEffect( ()=>{  
@@ -40,24 +54,27 @@ export default function Allhosting() {
       <th scope="col">Client Email</th>
       <th scope="col">Client Mobile</th>
       <th scope="col">Client Address</th>  
-      <th scope="col">Ip</th>
+      
       <th scope="col">Domain</th>
+      <th scope="col">Delete</th>
     </tr>   
   </thead>
   <tbody  >   
-     {             country.map(country1 => 
-   
-                  <tr> 
-      <th scope="row"> 11t</th>       
-      <td>{country1.name}</td>  
-      <td>{country1.email}</td>      
-      <td>{country1.mobile}</td>
-      <td>{country1.address}</td> 
-      <td>{country1.ip}</td>    
-      <td>{country1.domain}</td>  
-               </tr>   
-                  )
-               }      
+
+  {country.map((country1, index) => {
+        var sr=index+1;
+        return (<tr> 
+          <th scope="row"> {sr}</th>       
+          <td>{country1.name}</td>  
+          <td>{country1.email}</td>      
+          <td>{country1.mobile}</td>
+          <td>{country1.address}</td> 
+          
+          <td>{country1.domain}</td>  
+          <td><button type="button" onClick={() => handleDelete(country1._id)}>Delete</button></td>  
+                   </tr>)
+      })}
+         
   </tbody>
 </table>
   </form>
