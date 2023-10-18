@@ -1,5 +1,6 @@
 import React, {useEffect,useState} from 'react'
-import './css.css'
+import './css.css';
+import Loader from './Loader';
 export default function Allhosting() {
   const [country, setCountry] = useState([]);
     
