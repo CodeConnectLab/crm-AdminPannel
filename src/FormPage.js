@@ -5,9 +5,7 @@ export default function FormPage() {
   const [data, setData] = useState({});
 
   const handleSubmit = async (e) => {
-
-        
-    e.preventDefault();
+       e.preventDefault(); 
     const response = await fetch('https://task-mernss.onrender.com/api/v1/add_hosting', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -18,6 +16,7 @@ export default function FormPage() {
     const result = await response.json();
     console.log(result);
     alert(`Data has been submited`);
+    
   }
 
  
