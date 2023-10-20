@@ -7,7 +7,7 @@ export default function Loader() {
   height="80"
   width="80"
   radius="9"
-  color="green"
+  color="red"
   ariaLabel="loading"
   wrapperStyle
   wrapperClass

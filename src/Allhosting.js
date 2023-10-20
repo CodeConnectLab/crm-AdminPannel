@@ -1,47 +1,24 @@
 import React, {useEffect,useState} from 'react'
 import './css.css';
 import Loader from './Loader';
+import { getAllHosting, deleteHosting } from './features/allhostingSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 export default function Allhosting() {
-  const [country, setCountry] = useState([]);
-    
-
-  const handleDelete = async(e) => {
-    
+   const {hostings,loading} = useSelector((state)=>state.app);
+       const dispatch=useDispatch();
+      useEffect(()=>{
+         dispatch(getAllHosting());  
         
-    fetch(`https://task-mernss.onrender.com/api/v1/delete/${e}`, {
-      method: 'DELETE'
-    }) 
-    .then(res =>  res.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-    alert("delete Successfully")
-      
-  }
+      },[])  ;
+     
+       if(loading){
+        return(<Loader/>)
+       }
 
       
-  useEffect( ()=>{  
-      const getCountry = async ()=>{
-        try{
-          const res = await fetch("https://task-mernss.onrender.com/api/v1/hosting",{
-            method:'GET',
-            mode: 'cors',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json'
-            }
-          });
-          const getcon = await res.json();    
-          
-          setCountry(getcon); 
-          }catch(error){  
-           
-            console.log(error)
-        }
-      }
-      getCountry();
-  },[]);
  
-  return (
+  return ( 
     <div  className="container" >
         <div className='row'> 
         <div className='col-lg-10 m-auto abcd'>
@@ -58,11 +35,11 @@ export default function Allhosting() {
       
       <th scope="col">Domain</th>
       <th scope="col">Delete</th>
+      <th scope="col">Delete</th>
     </tr>   
   </thead>
-  <tbody  >   
-
-  {country.map((country1, index) => {
+  <tbody  >     
+  {   hostings.map((country1, index) => {
         var sr=index+1;
         return (<tr> 
           <th scope="row"> {sr}</th>       
@@ -70,10 +47,11 @@ export default function Allhosting() {
           <td>{country1.email}</td>      
           <td>{country1.mobile}</td>
           <td>{country1.address}</td> 
-          
+           
           <td>{country1.domain}</td>  
-          <td><button type="button" onClick={() => handleDelete(country1._id)}>Delete</button></td>  
-                   </tr>)
+          <td><button type="button"  onClick={()=>dispatch(deleteHosting(country1._id))}>Delete</button></td> 
+          <td><button><Link   to={`/edit/${country1._id}`} >Edit</Link></button></td> 
+                   </tr> )
       })}
          
   </tbody>

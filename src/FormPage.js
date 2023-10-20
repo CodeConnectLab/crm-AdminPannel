@@ -1,23 +1,20 @@
 import React , { useState } from 'react'
 import './css.css'
+import { useDispatch } from 'react-redux';
+import {createhosting} from './features/allhostingSlice';
+import {useNavigate} from "react-router-dom";
 export default function FormPage() {
 
   const [data, setData] = useState({});
+  const dispatch=useDispatch();
+  const navigate=useNavigate();
 
   const handleSubmit = async (e) => {
        e.preventDefault(); 
-    const response = await fetch('https://task-mernss.onrender.com/api/v1/add_hosting', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    const result = await response.json();
-    console.log(result);
-    alert(`Data has been submited`);
-    
-  }
+       dispatch(createhosting(data)); 
+       alert("Submit Successfully");  
+       navigate("/all_hosting");
+    };  
 
  
   return (  
@@ -29,6 +26,7 @@ export default function FormPage() {
       
       <input
         type="text"
+        required
         className="form-control" 
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
