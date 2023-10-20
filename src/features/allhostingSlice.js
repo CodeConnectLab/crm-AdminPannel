@@ -54,7 +54,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
         return result;
     } catch (error) { 
        return rejectWithValue(error);
-    }
+    }    
           
 });
    
