@@ -34,6 +34,7 @@ export default function Allhosting() {
       <th scope="col">Client Address</th>  
       
       <th scope="col">Domain</th>
+      <th scope="col">Status</th>
       <th scope="col">Delete</th>
       <th scope="col">Delete</th>
     </tr>   
@@ -48,7 +49,8 @@ export default function Allhosting() {
           <td>{country1.mobile}</td>
           <td>{country1.address}</td> 
            
-          <td>{country1.domain}</td>  
+          <td>{country1.domain}</td> 
+          <td>{country1.states}</td>    
           <td><button type="button"  onClick={()=>dispatch(deleteHosting(country1._id))}>Delete</button></td> 
           <td><button><Link   to={`/edit/${country1._id}`} >Edit</Link></button></td> 
                    </tr> )

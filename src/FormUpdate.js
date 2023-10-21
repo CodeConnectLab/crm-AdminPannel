@@ -24,8 +24,9 @@ export default function FormUpdate() {
 
       const handleSubmit=(e)=>{
            e.preventDefault();
+           console.log(updatedata)
            dispatch(updateHosting(updatedata));
-           navigate('/all_hosting');
+           navigate('/all_hosting');  
       }
          
     return (  
@@ -110,6 +111,24 @@ export default function FormUpdate() {
            // onChange={e => setData({...data, domain: e.target.value})}
           />
         </div>
+        <br/>
+
+        <div className="mb-3">
+          
+          <select
+            type="text"
+            name="states"
+           
+            className="form-control"
+            id="exampleInputPassword1"
+            placeholder='states'  
+            onChange={newdata}
+          >
+            <option value="inactive">inactive</option>
+            <option value="active">active</option>
+           </select>    
+        </div>
+
         <br/>
         <button type="submit" className="btn btn-primary">
           Submit
