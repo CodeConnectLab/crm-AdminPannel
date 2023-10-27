@@ -114,7 +114,6 @@ export default function FormUpdate() {
         <br/>
 
         <div className="mb-3">
-          
           <select
             type="text"
             name="states"

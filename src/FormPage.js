@@ -14,7 +14,7 @@ export default function FormPage() {
        dispatch(createhosting(data)); 
        alert("Submit Successfully");  
        navigate("/all_hosting");
-    };  
+    };          
 
  
   return (  
