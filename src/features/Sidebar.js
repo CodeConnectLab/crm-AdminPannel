@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
   return (
@@ -27,10 +28,10 @@ export default function Sidebar() {
       <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div className="sb-sidenav-menu">
           <div className="nav">
-             <a className="nav-link" href="/Home">
+             <Link className="nav-link" to="/Home">
               <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt" /></div>
               Dashboard
-            </a>
+            </Link>
              
             {/* <a className="nav-link collapsed d-none" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
               <div className="sb-nav-link-icon"><i className="fas fa-book-open" /></div>
@@ -63,14 +64,14 @@ export default function Sidebar() {
                 </div>
               </nav>
             </div> */}
-             <a className="nav-link" href="/FormPage">
+             <Link className="nav-link" to="/FormPage">
               <div className="sb-nav-link-icon"><i className="fas fa-chart-area" /></div>
               New Hosting
-            </a>
-            <a className="nav-link" href="/all_hosting">
+            </Link>
+            <Link className="nav-link" to="/all_hosting">
               <div className="sb-nav-link-icon"><i className="fas fa-table" /></div>
               All Hosting
-            </a>
+            </Link>
           </div>
         </div>
          
