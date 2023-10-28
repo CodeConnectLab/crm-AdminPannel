@@ -19,6 +19,7 @@ function App() {
     <div id="layoutSidenav_content">
  <Header />
      <Routes>
+     <Route  exact path="/" element={<Home />} />   
      <Route  exact path="/Home" element={<Home />} />
     <Route  exact path="/FormPage" element={<FormPage />} />
     <Route  exact path="/all_hosting" element={<Allhosting />} />
