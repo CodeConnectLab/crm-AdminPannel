@@ -24,7 +24,7 @@ export default function FormUpdate() {
 
       const handleSubmit=(e)=>{
            e.preventDefault();
-           console.log(updatedata)
+          
            dispatch(updateHosting(updatedata));
            navigate('/all_hosting');  
       }
