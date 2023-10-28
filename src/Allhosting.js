@@ -21,9 +21,10 @@ export default function Allhosting() {
   return ( 
     <div  className="container" >
         <div className='row'> 
-        <div className='col-lg-10 m-auto abcd'>
+        <div className='col-lg-12 m-auto abcd'>
         <form className='py-5 mt-50'>
-        <table className="table">
+        
+        <table className="table table table-bordered">
       
   <thead>
     <tr>
@@ -51,8 +52,8 @@ export default function Allhosting() {
            
           <td>{country1.domain}</td> 
           <td>{country1.states}</td>    
-          <td><button type="button"  onClick={()=>dispatch(deleteHosting(country1._id))}>Delete</button></td> 
-          <td><button><Link   to={`/edit/${country1._id}`} >Edit</Link></button></td> 
+          <td><button type="button" className="btn btn btn-danger btn-xs" onClick={()=>dispatch(deleteHosting(country1._id))}><i className="fa fa-trash"></i></button></td> 
+          <td><button class="btn btn-success btn-xs"><Link   to={`/edit/${country1._id}`} ><i className="fa fa-pencil"></i></Link></button></td> 
                    </tr> )
       })}
          

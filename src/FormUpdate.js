@@ -30,30 +30,37 @@ export default function FormUpdate() {
       }
          
     return (  
-        <div  className="container" >
-            <div className='row'> 
-            <div className='col-lg-6 m-auto abcd'>
-            <form 
-            onSubmit={handleSubmit} 
-            className='py-5 mt-20'>
-        <div className="mb-3">
-          
-          <input
-            type="text"
-            required
-            className="form-control" 
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder='Client Name'
-            name="name"
-            onChange={newdata}
-            value={updatedata && updatedata.name}  
-          //  onChange={e => setData({...data, name: e.target.value})}
-          />
-         
-        </div>
-        <br/>
-        <div className="mb-3">
+      <main>
+            <div className="container px-4">
+               <div className='row justify-content-center'> 
+               <div className='col-lg-7'>
+               <div className="card shadow-lg border-0 rounded-lg mt-2">
+                  <div className="card-header"><h3 className="text-center font-weight-light my-2">Edit Account</h3></div>
+                   <div className="card-body">
+                    <form 
+              onSubmit={handleSubmit} 
+              className='py-2'>
+               <div className="row mb-3">
+              <div className="col-md-6">
+                    <div className="form-floating mb-3">
+                
+                <input
+                  type="text"
+                  required
+                  className="form-control" 
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder='Client Name'
+                  name="name"
+                  onChange={newdata}
+                  value={updatedata && updatedata.name}  
+                //  onChange={e => setData({...data, name: e.target.value})}
+                />
+              
+                  </div>
+              </div>
+              <div className="col-md-6">
+               <div className="form-floating mb-3">
           
           <input
             type="email"
@@ -64,12 +71,11 @@ export default function FormUpdate() {
             onChange={newdata}
            // onChange={e => setData({...data, email: e.target.value})}
           />
-        </div>
-        <br/>
-    
-        <div className="mb-3">
-          
-          <input
+                 </div>
+               </div>
+             <div className="col-md-6">
+              <div className="form-floating mb-3">
+           <input
             type="number"
             name="mobile"
             value={updatedata && updatedata.mobile}
@@ -79,10 +85,10 @@ export default function FormUpdate() {
             onChange={newdata}
            // onChange={e => setData({...data, mobile: e.target.value})}
           />
-        </div>
-        <br/>
-    
-        <div className="mb-3">
+               </div>
+             </div>
+             <div className="col-md-6">
+           <div className="form-floating mb-3">
           
           <input
             type="text"
@@ -95,12 +101,10 @@ export default function FormUpdate() {
             //onChange={e => setData({...data, address: e.target.value})}
           />
         </div>
-        <br/>
-    
-    
-        <div className="mb-3">
-          
-          <input
+            </div> 
+             <div className="col-md-6">
+             <div className="form-floating mb-3">
+              <input
             type="text"
             name="domain"
             value={updatedata && updatedata.domain}
@@ -110,10 +114,10 @@ export default function FormUpdate() {
             onChange={newdata}
            // onChange={e => setData({...data, domain: e.target.value})}
           />
-        </div>
-        <br/>
-
-        <div className="mb-3">
+             </div>
+             </div>
+             <div className="col-md-6">
+           <div className="form-floating mb-3">
           <select
             type="text"
             name="states"
@@ -127,17 +131,21 @@ export default function FormUpdate() {
             <option value="active">active</option>
            </select>    
         </div>
-
-        <br/>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-                </div> 
-           
             </div>
-    
-          
-        </div>
+             <div className="col-md-6 text-center mx-auto">
+              <div className="form-floating pt-3 mb-3">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+              </div>
+             </div>
+               </div>
+                    </form>
+                   </div> 
+                </div>
+                 </div> 
+               </div>
+             </div>
+        </main>
       )
 }
