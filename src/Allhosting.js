@@ -53,7 +53,7 @@ export default function Allhosting() {
           <td>{country1.domain}</td> 
           <td>{country1.states}</td>    
           <td><button type="button" className="btn btn btn-danger btn-xs" onClick={()=>dispatch(deleteHosting(country1._id))}><i className="fa fa-trash"></i></button></td> 
-          <td><button class="btn btn-success btn-xs"><Link   to={`/edit/${country1._id}`} ><i className="fa fa-pencil"></i></Link></button></td> 
+          <td><button  type="button"  class="btn btn-success btn-xs"><Link   to={`/edit/${country1._id}`} ><i className="fa fa-pencil"></i></Link></button></td> 
                    </tr> )
       })}
          
