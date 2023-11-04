@@ -24,9 +24,14 @@ export default function FormUpdate() {
 
       const handleSubmit=(e)=>{
            e.preventDefault();
-          
-           dispatch(updateHosting(updatedata));
-           navigate('/all_hosting');  
+           var mobile=updatedata.mobile;
+    //  if(mobile.length!=10){ 
+        if (mobile.length < 10 || mobile.length > 10){
+        alert("Phone number must be 10 digits.");
+          }else{ 
+            dispatch(updateHosting(updatedata));
+            navigate('/all_hosting');    
+          }
       }
          
     return (  
@@ -121,13 +126,14 @@ export default function FormUpdate() {
           <select
             type="text"
             name="states"
-           
+             
             className="form-control"
             id="exampleInputPassword1"
             placeholder='states'  
             onChange={newdata}
           >
-            <option value="inactive">inactive</option>
+             <option>Chosse Option</option>
+            <option value="inactive" >inactive</option>  
             <option value="active">active</option>
            </select>    
         </div>

@@ -44,6 +44,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
    // Delete Hosting 
 
    export const deleteHosting= createAsyncThunk("deleteHosting",async(_id,{rejectWithValue})=>{
+    alert("sure for delete");
     const response=await fetch(`https://task-mernss.onrender.com/api/v1/delete/${_id}`,{
            method:"DELETE"
            
@@ -103,7 +104,7 @@ export const allhosting=createSlice({
             [updateHosting.fulfilled]:(state,action) =>{
                 state.loading=false;
                 state.hostings=state.hostings.map((ele)=>
-                  ele._id===action.payload._id?action.payload:ele
+                  ele._id==action.payload._id?action.payload:ele
                 );
               
             },
@@ -131,6 +132,7 @@ export const allhosting=createSlice({
             },
             [deleteHosting.fulfilled]:(state,action) =>{
                 state.loading=false; 
+                
                  const {_id} =action.payload.hosting;  
                 if(_id){
                     state.hostings=state.hostings.filter((ele)=>ele._id!==_id);  

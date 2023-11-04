@@ -11,9 +11,15 @@ export default function FormPage() {
 
   const handleSubmit = async (e) => {
        e.preventDefault(); 
-       dispatch(createhosting(data)); 
-       alert("Submit Successfully");  
-       navigate("/all_hosting");
+      const mobile=data.mobile;
+          if (mobile.length < 10 || mobile.length > 10){
+            alert("Phone number must be 10 digits.");
+      }else{
+        dispatch(createhosting(data)); 
+        alert("Submit Successfully");  
+       navigate("/all_hosting"); 
+      }
+      
     };  
 
  
