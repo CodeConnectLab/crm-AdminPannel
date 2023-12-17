@@ -131,13 +131,39 @@ export default function FormUpdate() {
             id="exampleInputPassword1"
             placeholder='states'  
             onChange={newdata}
+            value={updatedata && updatedata.states}
           >
              <option>Chosse Option</option>
-            <option value="inactive" >inactive</option>  
+            <option value="inactive">inactive</option>   
             <option value="active">active</option>
            </select>    
         </div>
             </div>
+
+            <div className="col-md-12">
+                      <div className="form-floating mb-3">
+                        <select
+                          type="text"
+                          name="Package"
+                          className="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="Package"
+                          onChange={(e) =>
+                            setupdatedata({ ...updatedata, Package: e.target.value })
+                          } 
+                          required  
+                          value={updatedata && updatedata?.Package}
+                        >
+                          <option value="">Chosse Package</option>  
+                          <option value={10}>Basic</option>
+                          <option value={30}>Premium</option>
+                          <option value={50}>Silver</option>
+                          <option value={500}>Gold</option>
+                        </select>
+                      </div>
+                    </div>
+
+
              <div className="col-md-6 text-center mx-auto">
               <div className="form-floating pt-3 mb-3">
             <button type="submit" className="btn btn-primary">

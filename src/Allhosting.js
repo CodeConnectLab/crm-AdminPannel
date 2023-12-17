@@ -36,6 +36,7 @@ export default function Allhosting() {
       
       <th scope="col">Domain</th>
       <th scope="col">Status</th>
+      <th scope="col">Package</th>
       <th scope="col">Delete</th>
       <th scope="col">Delete</th>
     </tr>   
@@ -43,6 +44,20 @@ export default function Allhosting() {
   <tbody  >     
   {   hostings.map((country1, index) => {
         var sr=index+1;
+        let Package_name='';
+    if(country1.Package==10){
+       Package_name='Basic';
+    }
+    if(country1.Package==30){
+       Package_name='Premium';
+    }
+    if(country1.Package==50){
+       Package_name='Silver';
+    }
+    if(country1.Package==500){
+       Package_name='Gold';
+    }
+
         return (<tr> 
           <th scope="row"> {sr}</th>       
           <td>{country1.name}</td>  
@@ -51,7 +66,8 @@ export default function Allhosting() {
           <td>{country1.address}</td> 
            
           <td>{country1.domain}</td> 
-          <td>{country1.states}</td>    
+          <td>{country1.states}</td>  
+          <td>{Package_name}</td>     
           <td><button type="button" className="btn btn btn-danger btn-xs" onClick={()=>dispatch(deleteHosting(country1._id))}><i className="fa fa-trash"></i></button></td> 
           <td><button  type="button"  class="btn btn-success btn-xs"><Link   to={`/edit/${country1._id}`} ><i className="fa fa-pencil"></i></Link></button></td> 
                    </tr> )
