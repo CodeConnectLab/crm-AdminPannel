@@ -10,7 +10,7 @@ export default function Allhosting() {
       useEffect(()=>{
          dispatch(getAllHosting());  
         
-      },[])  ;
+      },[]) ;
      
        if(loading){
         return(<Loader/>)
