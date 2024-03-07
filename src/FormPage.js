@@ -112,25 +112,74 @@ export default function FormPage() {
                     </div>
                     <div className="col-md-6">
                       <div className="form-floating mb-3">
-                        <select
-                          type="text"
-                          name="Package"
+                        <input  type="text" name="Package"
                           className="form-control"
                           id="exampleInputPassword1"
-                          placeholder="Package"
-                          onChange={(e) =>
+                          placeholder="No OF Agent"  onChange={(e) =>
                             setData({ ...data, Package: e.target.value })
                           } 
-                          required 
-                        >
-                          <option value="">Chosse Package</option>  
-                          <option value={10}>Basic</option>
-                          <option value={30}>Premium</option>
-                          <option value={50}>Silver</option>
-                          <option value={500}>Gold</option> 
-                        </select>
+                          required  />
+                          <label for="inputFirstName">No OF Agent</label>
+                       
                       </div>
                     </div>
+
+                    <div className="col-md-6">
+                      <div className="form-floating mb-3">
+                        <input  type="text" name="smsendpointurl"
+                          className="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="No OF Agent"  onChange={(e) =>
+                            setData({ ...data, smsendpointurl: e.target.value })
+                          } 
+                            />
+                          <label for="inputFirstName">Sms Endpointurl</label>
+                       
+                      </div>
+                    </div>
+
+                    <div className="col-md-6">
+                      <div className="form-floating mb-3">
+                        <input  type="text" name="smsuser"
+                          className="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="No OF Agent"  onChange={(e) =>
+                            setData({ ...data, smsuser: e.target.value })
+                          } 
+                            />
+                          <label for="inputFirstName">Sms User</label>
+                       
+                      </div>
+                    </div>
+
+                    <div className="col-md-6">
+                      <div className="form-floating mb-3">
+                        <input  type="text" name="smspass"
+                          className="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="No OF Agent"  onChange={(e) =>
+                            setData({ ...data, smspass: e.target.value })
+                          } 
+                            />
+                          <label for="inputFirstName">Sms Pass</label>
+                       
+                      </div>
+                    </div>
+
+                    <div className="col-md-6">
+                      <div className="form-floating mb-3">
+                        <input  type="text" name="smssender"
+                          className="form-control"
+                          id="exampleInputPassword1"
+                          placeholder="No OF Agent"  onChange={(e) =>
+                            setData({ ...data, smssender: e.target.value })
+                          } 
+                            />
+                          <label for="inputFirstName">Sms Sender</label>
+                       
+                      </div>
+                    </div>
+
                   </div>
                   <div className="card-footer text-center py-3">
                     <button type="submit" className="btn btn-primary">

@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
 
 /// creat  action 
    export const createhosting= createAsyncThunk("createhosting",async(data,{rejectWithValue})=>{
-        const response=await fetch("https://task-mernss.onrender.com/api/v1/add_hosting",{
+        const response=await fetch("https://crmlicence.bizavtar.com/api/v1/add_hosting",{
                method:"POST",
                headers:{
                 "Content-Type":"application/json",
@@ -23,7 +23,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
    // update 
    export const updateHosting= createAsyncThunk("updateHosting",async(data,{rejectWithValue})=>{
        
-    const response=await fetch(`https://task-mernss.onrender.com/api/v1/editHosting/${data._id}`,{
+    const response=await fetch(`https://crmlicence.bizavtar.com/api/v1/editHosting/${data._id}`,{
            method:"PUT",
            headers:{
             "Content-Type":"application/json",
@@ -45,7 +45,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
 
    export const deleteHosting= createAsyncThunk("deleteHosting",async(_id,{rejectWithValue})=>{
     alert("sure for delete");
-    const response=await fetch(`https://task-mernss.onrender.com/api/v1/delete/${_id}`,{
+    const response=await fetch(`https://crmlicence.bizavtar.com/api/v1/delete/${_id}`,{
            method:"DELETE"
            
     });
@@ -63,7 +63,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
 
    // show all data
    export const getAllHosting=createAsyncThunk("getAllHosting",async(args,{rejectWithValue})=>{
-         const response=await fetch("https://task-mernss.onrender.com/api/v1/hosting");
+         const response=await fetch("https://crmlicence.bizavtar.com/api/v1/hosting");
          try {
              const result=await response.json();
             

@@ -37,8 +37,9 @@ export default function Allhosting() {
       <th scope="col">Domain</th>
       <th scope="col">Status</th>
       <th scope="col">Package</th>
+      <th scope="col">SMSUrl</th>
       <th scope="col">Delete</th>
-      <th scope="col">Delete</th>
+      <th scope="col">Edit</th>
     </tr>   
   </thead>
   <tbody  >     
@@ -67,7 +68,8 @@ export default function Allhosting() {
            
           <td>{country1.domain}</td> 
           <td>{country1.states}</td>  
-          <td>{Package_name}</td>     
+          <td>{Package_name}</td>    
+          <td>{country1?.smsendpointurl}</td>      
           <td><button type="button" className="btn btn btn-danger btn-xs" onClick={()=>dispatch(deleteHosting(country1._id))}><i className="fa fa-trash"></i></button></td> 
           <td><button  type="button"  class="btn btn-success btn-xs"><Link   to={`/edit/${country1._id}`} ><i className="fa fa-pencil"></i></Link></button></td> 
                    </tr> )
