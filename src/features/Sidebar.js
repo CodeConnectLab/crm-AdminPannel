@@ -72,6 +72,14 @@ export default function Sidebar() {
               <div className="sb-nav-link-icon"><i className="fas fa-table" /></div>
               All Hosting
             </Link>
+            <Link className="nav-link" to="/addsmspackage">
+              <div className="sb-nav-link-icon"><i className="fas fa-table" /></div>
+              Add SMS Packeage
+            </Link>
+            <Link className="nav-link" to="/AllSMSPAckage">
+              <div className="sb-nav-link-icon"><i className="fas fa-table" /></div>
+              All SMS PAckage
+            </Link>
           </div>
         </div>
          

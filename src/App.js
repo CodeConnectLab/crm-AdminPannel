@@ -8,6 +8,8 @@ import FormPage from './FormPage';
 import Sidebar from './features/Sidebar';
 import Allhosting from './Allhosting';
 import FormUpdate from './FormUpdate';
+import AddSMSPackeage from './AddSMSPackeage';
+import AllSMSPAckage from './AllSMSPAckage';
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   
@@ -20,6 +22,8 @@ function App() {
  <Header />
      <Routes>
      <Route  exact path="/" element={<Home />} />   
+     <Route  exact path="/addsmspackage" element={<AddSMSPackeage />} />   
+     <Route  exact path="/AllSMSPAckage" element={<AllSMSPAckage />} />   
      <Route  exact path="/Home" element={<Home />} />
     <Route  exact path="/FormPage" element={<FormPage />} />
     <Route  exact path="/all_hosting" element={<Allhosting />} />
