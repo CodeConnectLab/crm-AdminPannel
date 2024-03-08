@@ -1,14 +1,14 @@
 import React, {useEffect,useState} from 'react'
 import './css.css';
 import Loader from './Loader';
-import { getALLSMSPACK, deleteSMSPACKAGE } from './features/allhostingSlice';
+import { getALLWTSPPACK, deleteWTSPPACKAGE } from './features/allhostingSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-export default function AllSMSPAckage() {
-   const {SMSPAckage,loading} = useSelector((state)=>state.app);
+export default function AllWTSPPackege() {
+   const {WTSPPAckage,loading} = useSelector((state)=>state.app);
        const dispatch=useDispatch();
       useEffect(()=>{
-         dispatch(getALLSMSPACK());  
+         dispatch(getALLWTSPPACK());  
         
       },[]) ;
      
@@ -37,7 +37,7 @@ export default function AllSMSPAckage() {
     </tr>   
   </thead>
   <tbody  >     
-  {   SMSPAckage.map((country1, index) => {
+  {   WTSPPAckage.map((country1, index) => {
         var sr=index+1;
        
 
@@ -46,7 +46,7 @@ export default function AllSMSPAckage() {
           <td>{country1.noofsms}</td>  
           <td>{country1.price} </td>      
              
-          <td><button type="button" className="btn btn btn-danger btn-xs" onClick={()=>dispatch(deleteSMSPACKAGE(country1._id))}><i className="fa fa-trash"></i></button></td> 
+          <td><button type="button" className="btn btn btn-danger btn-xs" onClick={()=>dispatch(deleteWTSPPACKAGE(country1._id))}><i className="fa fa-trash"></i></button></td> 
           {/* <td><button  type="button"  class="btn btn-success btn-xs"><Link   to={`/edit/${country1._id}`} ><i className="fa fa-pencil"></i></Link></button></td>  */}
                    </tr> )
       })}

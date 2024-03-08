@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css.css";
 import { useDispatch } from "react-redux";
-import { addsmspack } from "./features/allhostingSlice";
+import { addwtsppack } from "./features/allhostingSlice";
 import { useNavigate } from "react-router-dom";
 export default function AddSMSPackeage() {
   const [data, setData] = useState({});
@@ -10,9 +10,9 @@ export default function AddSMSPackeage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-     dispatch(addsmspack(data));
+     dispatch(addwtsppack(data));
       alert("Submit Successfully");
-      navigate("/AllSMSPAckage");
+      navigate("/AllWTSPPAckage");
   };
   return (
     <main>

@@ -80,6 +80,16 @@ export default function Sidebar() {
               <div className="sb-nav-link-icon"><i className="fas fa-table" /></div>
               All SMS PAckage
             </Link>
+            
+            <Link className="nav-link" to="/addwtsppackage">
+              <div className="sb-nav-link-icon"><i className="fas fa-table" /></div>
+              Add WTSP Packeage
+            </Link>
+            <Link className="nav-link" to="/AllWTSPPAckage">
+              <div className="sb-nav-link-icon"><i className="fas fa-table" /></div>
+              All WTSP PAckage
+            </Link>
+
           </div>
         </div>
          

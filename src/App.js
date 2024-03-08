@@ -10,35 +10,39 @@ import Allhosting from './Allhosting';
 import FormUpdate from './FormUpdate';
 import AddSMSPackeage from './AddSMSPackeage';
 import AllSMSPAckage from './AllSMSPAckage';
+import AllWAllWTSPPackegeTSP from './AllWTSPPackege';
+import AddWTSPackeage from './AddWTSPackeage';
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
-  
+
   return (
     <div>
-      
-<Router>
-     <div id="layoutSidenav">
-    <div id="layoutSidenav_content">
- <Header />
-     <Routes>
-     <Route  exact path="/" element={<Home />} />   
-     <Route  exact path="/addsmspackage" element={<AddSMSPackeage />} />   
-     <Route  exact path="/AllSMSPAckage" element={<AllSMSPAckage />} />   
-     <Route  exact path="/Home" element={<Home />} />
-    <Route  exact path="/FormPage" element={<FormPage />} />
-    <Route  exact path="/all_hosting" element={<Allhosting />} />
-    <Route  exact path="/edit/:id" element={<FormUpdate />} />
-      </Routes>
-    
-  
-   <Sidebar /> 
-   <Footer />
-   </div>
-   </div> 
-     
-   </Router> 
-     </div>  
+
+      <Router>
+        <div id="layoutSidenav">
+          <div id="layoutSidenav_content">
+            <Header />
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/addsmspackage" element={<AddSMSPackeage />} />
+              <Route exact path="/AllSMSPAckage" element={<AllSMSPAckage />} />
+              <Route exact path="/Home" element={<Home />} />
+              <Route exact path="/FormPage" element={<FormPage />} />
+              <Route exact path="/all_hosting" element={<Allhosting />} />
+              <Route exact path="/addwtsppackage" element={<AddWTSPackeage />} />
+              <Route exact path="/AllWTSPPAckage" element={<AllWAllWTSPPackegeTSP />} />
+              <Route exact path="/edit/:id" element={<FormUpdate />} />
+            </Routes>
+
+
+            <Sidebar />
+            <Footer />
+          </div>
+        </div>
+
+      </Router>
+    </div>
   );
 }
- 
+
 export default App;
