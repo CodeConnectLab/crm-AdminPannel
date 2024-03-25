@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
 
 /// creat  action 
    export const createhosting= createAsyncThunk("createhosting",async(data,{rejectWithValue})=>{
-        const response=await fetch("https://crmlicence.bizavtar.com/api/v1/add_hosting",{
+        const response=await fetch("https://www.admin.backend.crm.codeconnect.in/api/v1/add_hosting",{
                method:"POST",
                headers:{
                 "Content-Type":"application/json",
@@ -21,7 +21,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
    });
    /////////  add Sms Package 
   export const addsmspack=createAsyncThunk("addsmspack",async(data,{rejectWithValue})=>{
-    const response=await fetch("https://crmlicence.bizavtar.com/api/v1/addsmspack",{
+    const response=await fetch("https://www.admin.backend.crm.codeconnect.in/api/v1/addsmspack",{
         method:"POST",
         headers:{
          "Content-Type":"application/json",
@@ -38,7 +38,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
 
     /////////  add Wtsp Package 
   export const addwtsppack=createAsyncThunk("addwtsppack",async(data,{rejectWithValue})=>{
-    const response=await fetch("https://crmlicence.bizavtar.com/api/v1/addwtsppack",{
+    const response=await fetch("https://www.admin.backend.crm.codeconnect.in/api/v1/addwtsppack",{
         method:"POST",
         headers:{
          "Content-Type":"application/json",
@@ -57,7 +57,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
    // update 
    export const updateHosting= createAsyncThunk("updateHosting",async(data,{rejectWithValue})=>{
        
-    const response=await fetch(`https://crmlicence.bizavtar.com/api/v1/editHosting/${data._id}`,{
+    const response=await fetch(`https://www.admin.backend.crm.codeconnect.in/api/v1/editHosting/${data._id}`,{
            method:"PUT",
            headers:{
             "Content-Type":"application/json",
@@ -78,7 +78,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
    // Delete Hosting 
    export const deleteHosting= createAsyncThunk("deleteHosting",async(_id,{rejectWithValue})=>{
     alert("sure for delete");
-    const response=await fetch(`https://crmlicence.bizavtar.com/api/v1/delete/${_id}`,{
+    const response=await fetch(`https://www.admin.backend.crm.codeconnect.in/api/v1/delete/${_id}`,{
            method:"DELETE"
     });
     try {
@@ -91,7 +91,7 @@ import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/too
 // Delete deleteSMSPACKAGE 
 export const deleteSMSPACKAGE= createAsyncThunk("deleteSMSPACKAGE",async(_id,{rejectWithValue})=>{
     alert("sure for delete");
-    const response=await fetch(`https://crmlicence.bizavtar.com/api/v1/deleteSMSPACKAGE/${_id}`,{
+    const response=await fetch(`https://www.admin.backend.crm.codeconnect.in/api/v1/deleteSMSPACKAGE/${_id}`,{
            method:"DELETE"
     });
     try {
@@ -105,7 +105,7 @@ export const deleteSMSPACKAGE= createAsyncThunk("deleteSMSPACKAGE",async(_id,{re
 // Delete deleteWTSPPACKAGE 
 export const deleteWTSPPACKAGE= createAsyncThunk("deleteWTSPPACKAGE",async(_id,{rejectWithValue})=>{
     alert("sure for delete");
-    const response=await fetch(`https://crmlicence.bizavtar.com/api/v1/deleteWTSPPACKAGE/${_id}`,{
+    const response=await fetch(`https://www.admin.backend.crm.codeconnect.in/api/v1/deleteWTSPPACKAGE/${_id}`,{
            method:"DELETE"
     });
     try {
@@ -120,7 +120,7 @@ export const deleteWTSPPACKAGE= createAsyncThunk("deleteWTSPPACKAGE",async(_id,{
 
    // show all data
    export const getAllHosting=createAsyncThunk("getAllHosting",async(args,{rejectWithValue})=>{
-         const response=await fetch("https://crmlicence.bizavtar.com/api/v1/hosting");
+         const response=await fetch("https://www.admin.backend.crm.codeconnect.in/api/v1/hosting");
          try {
              const result=await response.json();
             
@@ -132,7 +132,7 @@ export const deleteWTSPPACKAGE= createAsyncThunk("deleteWTSPPACKAGE",async(_id,{
 
    //////get app sms pack
    export const getALLSMSPACK=createAsyncThunk("getALLSMSPACK",async(args,{rejectWithValue})=>{
-    const response=await fetch("https://crmlicence.bizavtar.com/api/v1/getAllsmspack");
+    const response=await fetch("https://www.admin.backend.crm.codeconnect.in/api/v1/getAllsmspack");
     try {
         const result=await response.json();
        
@@ -144,7 +144,7 @@ export const deleteWTSPPACKAGE= createAsyncThunk("deleteWTSPPACKAGE",async(_id,{
 
    //////get app sms pack
    export const getALLWTSPPACK=createAsyncThunk("getALLWTSPPACK",async(args,{rejectWithValue})=>{
-    const response=await fetch("https://crmlicence.bizavtar.com/api/v1/getAllwtsppack");
+    const response=await fetch("https://www.admin.backend.crm.codeconnect.in/api/v1/getAllwtsppack");
     try {
         const result=await response.json();
        
